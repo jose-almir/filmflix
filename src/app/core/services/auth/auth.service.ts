@@ -52,4 +52,8 @@ export class AuthService {
 
     return docData(userDoc).pipe(map((data) => data as User));
   }
+
+  logout() {
+    this.auth.signOut();
+  }
 }
