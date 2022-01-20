@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth/auth.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  user$?: Observable<User | undefined>;
+  user$!: Observable<User | undefined>;
 
   constructor(private authService: AuthService) {}
 

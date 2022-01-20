@@ -4,7 +4,13 @@
   </a>
   <span class="spacer"></span>
   <div *ngIf="user$ | async as user; else unlogged" class="user-menu">
-    <img class="avatar" [src]="user.profile" alt="Avatar" />
+    <img
+      class="avatar"
+      [src]="user.profile"
+      alt="Avatar"
+      routerLink="/perfil"
+      routerLinkActive="avatar-active"
+    />
     <button mat-icon-button (click)="logout()">
       <mat-icon>logout</mat-icon>
     </button>
